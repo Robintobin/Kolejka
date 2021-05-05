@@ -1,0 +1,15 @@
+@startuml
+
+class Spieler{
+    -farbe: Farbe
+    -spielfiguren: Spielfigur[]
+    -einkaufszettel: Einkaufszettel
+    -warenkarten: Warenkarte[]
+    -aktionskarten: Aktionskarte[]
+
+    +setzeSpielfigur(): void 
+    +hatFreieSpielfigur(): boolean
+    +istFertig(): boolean
+}
+
+@enduml
