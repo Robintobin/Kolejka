@@ -1,0 +1,53 @@
+@startuml
+class Spiel
+class Spieler
+class Spekulant
+class Spielfigur
+class Liste
+class Stapel
+class Schlange
+class Karte
+class Einkaufszettel
+class Warenkarte
+class Lieferkarte
+class Aktionskarte
+class Laden
+class Schwarzmarkt
+enum Warentyp {
+    Kiosk
+    Lebensmittel
+    Möbel
+    Gerät
+    Kleidung
+    ...
+}
+
+
+Spiel o.. Spieler
+Spieler o.. Spielfigur
+Spekulant <|-- Spielfigur
+Spiel o.. Spekulant
+
+Stapel <|-- Liste
+Schlange <|-- Liste
+
+Einkaufszettel <|-- Karte
+Warenkarte <|-- Karte
+Lieferkarte <|-- Karte
+Aktionskarte <|-- Karte
+
+Schwarzmarkt <|-- Laden
+
+Warenkarte o.. Warentyp
+Lieferkarte o.. Warentyp
+
+Spieler o.. Einkaufszettel
+Spieler o.. Aktionskarte
+Spieler o.. Warenkarte
+
+Spiel o.. Lieferkarte
+Spiel o.. Laden
+Spiel o.. Schwarzmarkt
+
+Laden o.. Warenkarte
+@enduml
