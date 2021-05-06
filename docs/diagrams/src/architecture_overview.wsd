@@ -6,6 +6,7 @@
 class Spiel
 class Spieler
 class Spekulant
+class Spielerfigur
 class Spielfigur
 class Liste
 class Kartenstapel
@@ -24,6 +25,7 @@ enum Warentyp
 class Spiel {
     -spielerListe: Spieler[]
     -ladenListe: Laden[]
+    -schwarzmarkt: Schwarzmarkt
     -lieferkartenKartenstapel: Lieferkarte[]
     -muelleimer: Lieferkarte[]
 
@@ -40,7 +42,7 @@ class Spiel {
 
 class Spieler {
     -farbe: Farbe
-    -spielfiguren: Spielfigur[]
+    -spielfiguren: Spielerfigur[]
     -einkaufszettel: Einkaufszettel
     -warenkarten: Warenkarte[]
     -aktionskarten: Aktionskarte[]
@@ -53,10 +55,13 @@ class Spieler {
 class Spekulant {
     -schwarzmarkt: Schwarzmarkt
 }
-class Spielfigur {
+class Spielerfigur {
     -spieler: Spieler
 }
-class Liste {
+abstract class Spielfigur {
+    -farbe: Farbe
+}
+abstract class Liste {
     (ArrayList)
 }
 class Kartenstapel {
@@ -111,7 +116,8 @@ class Schwarzmarkt {
     -marktfrau: int
     -marktfelder: Kartenstapel[]
 
-    +gibAktuellesFeld(warentyp: Warentyp): int
+    +gibMarktfrauFeld(warentyp: Warentyp): int
+    +verschiebeMarktfrau(): void
 }
 enum Warentyp {
     Kiosk
@@ -123,9 +129,10 @@ enum Warentyp {
 
 ' Klassen-Beziehungen
 Spiel o.. Spieler
-Spieler o.. Spielfigur
+Spieler o.. Spielerfigur
+
 Spekulant --|> Spielfigur
-Spiel o.. Spekulant
+Spielerfigur --|> Spielfigur
 
 Kartenstapel o.. Liste
 Warteschlange o.. Liste
@@ -138,6 +145,7 @@ Aktionskarte --|> Spielkarte
 
 Schwarzmarkt --|> Laden
 Warenladen --|> Laden
+Warenladen o.. Spekulant
 
 Warenkarte o.. Warentyp
 Lieferkarte o.. Warentyp
@@ -151,4 +159,14 @@ Spiel o.. Warenladen
 Spiel o.. Schwarzmarkt
 
 Warenladen o.. Warentyp
+
+Laden o.. Warteschlange
+
+Spiel o.. Kartenstapel
+Spieler o.. Kartenstapel
+Warenladen o.. Kartenstapel
+Schwarzmarkt o.. Kartenstapel
+
+' Spielerfigur --> Spieler
+' Spekulant --> Schwarzmarkt
 @enduml
