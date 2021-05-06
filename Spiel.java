@@ -1,6 +1,7 @@
 public class Spiel {
 
     public void spielverlauf() {
+        // while (!spielVorbei()) {}
         anstellenInDenWarteschlangen();
         warenlieferung();
         draengelei();
@@ -20,6 +21,22 @@ public class Spiel {
          * den Markt, bis sich alle Spielfiguren auf dem Spielplan befinden. Sobald dies
          * der Fall ist, beginnt die nächste Phase.
          */
+        // gibt an, ob einer der Spieler noch Spielfiguren setzen kann
+        boolean jemandKannSetzen = true;
+
+        while (jemandKannSetzen) {
+            jemandKannSetzen = false;
+            for (Spieler spieler : spielerListe) {
+                if (spieler.hatFreieSpielfigur()) {
+                    spieler.setzeSpielfigur();
+                }
+                // IF nachdem gesetzt wurde immer noch freie Spielfigur
+                if (spieler.hatFreieSpielfigur()) {
+                    // nicht aufhören
+                    jemandKannSetzen = true;
+                }
+            }
+        }
 
     }
 
@@ -36,6 +53,14 @@ public class Spiel {
          * Die Warenkarten werden so in die Läden gelegt, dass ihre Namen gut sichtbar
          * sind.
          */
+        Lieferkarten[] lieferkarten = lieferkartenStapel.getObersteDrei();
+        for (Lieferkarte lieferkarte : lieferkarten) {
+            Warentyp warentyp = lieferkarte.getTyp();
+            int anzahl = lieferkarte.getAnzahl();
+
+            Laden laden = laeden.vomTyp(warentyp); // laden mit dem Warentyp
+            laden.addWare(anzahl);
+        }
     }
 
     public void draengelei() {
@@ -50,14 +75,16 @@ public class Spiel {
          * auf das Ablagefeld für Aktionskarten auf dem Spielplan und führt ihre Aktion
          * aus.
          * 
-         * 2. Er kann oder möchte keine Handkarte spielen und passt.Achtung! Wer passt,
-         * darf keine weiteren Handkarten mehr spielen. Er legt seine übrigen Handkarten
-         * zurück auf seinen Nachziehstapel.
+         * 2. Er kann oder möchte keine Handkarte spielen und passt.
+         * 
+         * Achtung! Wer passt, darf keine weiteren Handkarten mehr spielen. Er legt
+         * seine übrigen Handkarten zurück auf seinen Nachziehstapel.
          * 
          * Dies wird so lange fortgesetzt, bis alle Spieler ihre Handkarten entweder
          * ausgespielt oder durch Passen zurück auf ihren Nachziehstapel gelegt haben.
          * Danach endet diese Phase.
          */
+
     }
 
     public void ladenoeffnung() {
