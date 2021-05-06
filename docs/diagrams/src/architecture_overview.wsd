@@ -1,42 +1,143 @@
 @startuml
+' Für bessere Export-Auflösung:
+' skinparam dpi 300
+
+' Klassen
 class Spiel
 class Spieler
 class Spekulant
 class Spielfigur
 class Liste
-class Stapel
-class Schlange
+class Kartenstapel
+class Warteschlange
 class Karte
 class Einkaufszettel
 class Warenkarte
 class Lieferkarte
 class Aktionskarte
 class Laden
+class Warenladen
 class Schwarzmarkt
+enum Warentyp
+
+' Attribute etc.
+class Spiel {
+    -spielerListe: Spieler[]
+    -ladenListe: Laden[]
+    -lieferkartenKartenstapel: Lieferkarte[]
+    -muelleimer: Lieferkarte[]
+
+    +spielverlauf(): void
+    -anstellenInDenWarteschlangen(): void
+    -warenlieferung(): void
+    -draengelei(): void
+    -ladenoeffnung(): void
+    -tauschenAufDemMarkt(): void
+    -aufraeumphase(): void
+
+    -samstag(): void
+}
+
+class Spieler {
+    -farbe: Farbe
+    -spielfiguren: Spielfigur[]
+    -einkaufszettel: Einkaufszettel
+    -warenkarten: Warenkarte[]
+    -aktionskarten: Aktionskarte[]
+
+    +setzeSpielfigur(): void 
+    +hatFreieSpielfigur(): boolean
+    +istFertig(): boolean
+}
+
+class Spekulant {
+    -schwarzmarkt: Schwarzmarkt
+}
+class Spielfigur {
+    -spieler: Spieler
+}
+class Liste {
+    (ArrayList)
+}
+class Kartenstapel {
+    -pop(): T
+    -push(object: T)
+}
+class Warteschlange {
+    -pop(): T
+    -push(object: T)
+
+    +reverse(): void
+    +move(from: int, to: int): void
+}
+abstract class Karte {
+    ...
+}
+
+abstract class Spielkarte {
+    -name: String
+    -farbe: Farbe
+    -bild: Bild
+    -beschreibung: String
+    ...
+}
+
+class Einkaufszettel {
+    -warentypen: Warentyp[]
+    
+    +gibAnzahl(warentyp: Warentyp): int
+}
+class Warenkarte {
+    -warentyp: Warentyp
+}
+class Lieferkarte {
+    -warentyp: Warentyp
+    -anzahl: int
+}
+class Aktionskarte {
+    ...
+}
+abstract class Laden {
+    -warteschlange: Warteschlange
+    -gibErstePosition(): Spieler
+
+}
+class Warenladen {
+    -warentyp: Warentyp
+    -marktfeld: Kartenstapel
+
+}
+class Schwarzmarkt {
+    -marktfrau: int
+    -marktfelder: Kartenstapel[]
+
+    +gibAktuellesFeld(warentyp: Warentyp): int
+}
 enum Warentyp {
     Kiosk
     Lebensmittel
     Möbel
     Gerät
     Kleidung
-    ...
 }
 
-
+' Klassen-Beziehungen
 Spiel o.. Spieler
 Spieler o.. Spielfigur
-Spekulant <|-- Spielfigur
+Spekulant --|> Spielfigur
 Spiel o.. Spekulant
 
-Stapel <|-- Liste
-Schlange <|-- Liste
+Kartenstapel o.. Liste
+Warteschlange o.. Liste
 
-Einkaufszettel <|-- Karte
-Warenkarte <|-- Karte
-Lieferkarte <|-- Karte
-Aktionskarte <|-- Karte
+Einkaufszettel --|> Karte
+Spielkarte --|> Karte
+Warenkarte --|> Spielkarte
+Lieferkarte --|> Spielkarte
+Aktionskarte --|> Spielkarte
 
-Schwarzmarkt <|-- Laden
+Schwarzmarkt --|> Laden
+Warenladen --|> Laden
 
 Warenkarte o.. Warentyp
 Lieferkarte o.. Warentyp
@@ -46,8 +147,8 @@ Spieler o.. Aktionskarte
 Spieler o.. Warenkarte
 
 Spiel o.. Lieferkarte
-Spiel o.. Laden
+Spiel o.. Warenladen
 Spiel o.. Schwarzmarkt
 
-Laden o.. Warenkarte
+Warenladen o.. Warentyp
 @enduml
