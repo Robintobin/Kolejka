@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  8 MAY 2021 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  8 MAY 2021 22:01
 entering extended mode
 **e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
 (e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
@@ -1005,15 +1005,15 @@ Package pdftex.def Info: ../../diagrams/out/architecture_overview/architecture_o
  [3
 
  <../../diagrams/out/architecture_overview/architecture_overview.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 48.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 ) [4
@@ -1037,13 +1037,13 @@ Package rerunfilecheck Info: File `beamer.out' has not changed.
 Here is how much of TeX's memory you used:
  28295 strings out of 479334
  583995 string characters out of 2857085
- 938056 words of memory out of 3000000
+ 939342 words of memory out of 3000000
  45141 multiletter control sequences out of 15000+200000
  409918 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,19n,132p,530b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on beamer.pdf (5 pages, 127505 bytes).
+Output written on beamer.pdf (5 pages, 127889 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)
