@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  6 MAY 2021 21:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  8 MAY 2021 18:50
 entering extended mode
 **e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
 (e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
@@ -997,16 +997,12 @@ Dictionary: translator-theorem-dictionary, Language: English
 ] (beamer.toc) [2
 
 ]
-<../../diagrams/out/architecture_overview/architecture_overview.png, id=103, 1345.025pt x 918.43124pt>
+<../../diagrams/out/architecture_overview/architecture_overview.png, id=103, 1134.2375pt x 612.2875pt>
 File: ../../diagrams/out/architecture_overview/architecture_overview.png Graphic file (type png)
 <use ../../diagrams/out/architecture_overview/architecture_overview.png>
 Package pdftex.def Info: ../../diagrams/out/architecture_overview/architecture_overview.png  used on input line 23.
-(pdftex.def)             Requested size: 307.28987pt x 209.81932pt.
-
-Overfull \vbox (1.77257pt too high) detected at line 23
- []
-
-[3
+(pdftex.def)             Requested size: 307.28987pt x 165.8804pt.
+ [3
 
  <../../diagrams/out/architecture_overview/architecture_overview.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
@@ -1047,7 +1043,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  131i,19n,132p,530b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on beamer.pdf (5 pages, 162809 bytes).
+Output written on beamer.pdf (5 pages, 127505 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)
