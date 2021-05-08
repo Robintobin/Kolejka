@@ -1,7 +1,7 @@
 # Kolejka
 In dieser Schlange warten Sie lange!
 
-## Präsentation
+## LaTeX-Präsentation
 https://github.com/Robintobin/Kolejka/blob/main/docs/latex/beamer/beamer.pdf
 
 ## Struktur-Überblick
