@@ -12,8 +12,8 @@
 class Spiel
 class Spieler
 class Spekulant
-abstract class Spielerfigur
-class Spielfigur
+class Spielerfigur
+abstract class Spielfigur
 abstract class Liste
 class Kartenstapel<Spielkarte>
 class Warteschlange<Spielfigur>

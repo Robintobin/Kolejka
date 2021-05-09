@@ -36,10 +36,10 @@ class Spekulant {
 class Spielerfigur {
     -spieler: Spieler
 }
-class Spielfigur {
+abstract class Spielfigur {
     -farbe: Farbe
 }
-class Liste {
+abstract class Liste {
     (ArrayList)
 }
 class Kartenstapel<Spielkarte> {
@@ -54,10 +54,10 @@ class Warteschlange<Spielfigur> {
     +move(from: int, to: int): void
     +remove(index: int): void
 }
-class Karte {
+abstract class Karte {
     ...
 }
-class Spielkarte {
+abstract class Spielkarte {
     -name: String
     -farbe: Farbe
     -bild: Bild
@@ -79,7 +79,7 @@ class Lieferkarte {
 class Aktionskarte {
     ...
 }
-class Laden {
+abstract class Laden {
     -warteschlange: Warteschlange
     -gibErstePosition(): Spieler
 
