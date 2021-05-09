@@ -4,20 +4,19 @@ Was dieses Programm macht:
         - Spiel
         - Spieler
         - ...
-    ...aus Plantuml-Datei lesen und in LaTeX-Datei schreiben (übersetzen)
+    ...aus Plantuml-Datei lesen, in LaTeX umwandel, und zum clipboard kopieren
     
 
 1 Klassen-Diagramm-Datei lesen
 2 gesuchte Klassen finden
 3 für jede Klasse
     3.1 Plantuml-Klasse zu LaTeX Klasse übersetzen
-    3.2 entsprechende Klasse in LaTeX-Datei finden
-    3.3 übersetzte Klasse an entsprechender Stelle einfügen (und alte version ersetzen)
-4 Fertig
-
+    3.2 zum Clipboard kopieren
+4 Selbstständig entsprechenden Code in LaTeX datei ersetzen
 """
 
 import os
+import pyperclip
 
 """ 
 VARIABLES
@@ -115,8 +114,11 @@ MAIN
 """
 def main() -> None:
     # print(read_diagram_file())
+    out = ""
     for line in find_diagram_classes():
-        print(line)
+        out += line+"\n"
+    print(out)
+    pyperclip.copy(out) # copy to clipboard
     pass
 
 if __name__ == "__main__":
