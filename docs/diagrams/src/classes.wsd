@@ -78,16 +78,17 @@ class Lieferkarte {
 class Aktionskarte {
     -aktionstyp: Aktionstyp
     
-    +anwesenheitsliste(): void
-    +bueckware(): void
-    +freundImKomitee(): void
-    +gluecklicherZufall(): void
-    +groessereLieferung(): void
-    +inventur(): void
-    +kritikAnDerRegierung(): void
-    +lieferfehler(): void
-    +mutterMitBaby(): void
-    +vordraengler(): void
+    +aktion(): void
+    -anwesenheitsliste(): void
+    -bueckware(): void
+    -freundImKomitee(): void
+    -gluecklicherZufall(): void
+    -groessereLieferung(): void
+    -inventur(): void
+    -kritikAnDerRegierung(): void
+    -lieferfehler(): void
+    -mutterMitBaby(): void
+    -vordraengler(): void
 }
 abstract class Laden {
     -warteschlange: Warteschlange
@@ -96,7 +97,6 @@ abstract class Laden {
 class Warenladen {
     -warentyp: Warentyp
     -marktfeld: Kartenstapel
-
 }
 class Schwarzmarkt {
     -marktfrau: int
