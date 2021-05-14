@@ -6,7 +6,19 @@
  * @version 14.05.21
  */
 public class Aktionskarte {
-    public void anwesenheitsliste() {
+    private Aktionstyp aktionstyp;
+
+    public Aktionskarte(Aktionstyp aktionstyp) {
+        this.aktionstyp = aktionstyp;
+    }
+
+    public void aktion() {
+        /*
+         * Ruft die jeweilige Aktionsmethode der Aktionskarte auf.
+         */
+    }
+
+    private void anwesenheitsliste() {
         /*
          * ANWESENHEITSLISTE
          * 
@@ -18,7 +30,7 @@ public class Aktionskarte {
          */
     }
 
-    public void bueckware() {
+    private void bueckware() {
         /*
          * BÜCKWARE
          * 
@@ -31,7 +43,7 @@ public class Aktionskarte {
          */
     }
 
-    public void freundImKomitee() {
+    private void freundImKomitee() {
         /*
          * FREUND IM KOMITEE
          * 
@@ -43,7 +55,7 @@ public class Aktionskarte {
          */
     }
 
-    public void gluecklicherZufall() {
+    private void gluecklicherZufall() {
         /*
          * GLÜCKLICHER ZUFALL
          * 
@@ -55,7 +67,7 @@ public class Aktionskarte {
          */
     }
 
-    public void groessereLieferung() {
+    private void groessereLieferung() {
         /*
          * GRÖßERE LIEFERUNG
          * 
@@ -67,7 +79,7 @@ public class Aktionskarte {
          */
     }
 
-    public void inventur() {
+    private void inventur() {
         /*
          * INVENTUR
          * 
@@ -81,7 +93,7 @@ public class Aktionskarte {
          */
     }
 
-    public void kritikAnDerRegierung() {
+    private void kritikAnDerRegierung() {
         /*
          * KRITIK AN DER REGIERUNG
          * 
@@ -94,7 +106,7 @@ public class Aktionskarte {
          */
     }
 
-    public void lieferfehler() {
+    private void lieferfehler() {
         /*
          * LIEFERFEHLER
          * 
@@ -105,7 +117,7 @@ public class Aktionskarte {
          */
     }
 
-    public void mutterMitBaby() {
+    private void mutterMitBaby() {
         /*
          * MUTTER MIT BABY
          * 
@@ -117,7 +129,7 @@ public class Aktionskarte {
          */
     }
 
-    public void vordraengler() {
+    private void vordraengler() {
         /*
          * VORDRÄNGLER
          * 
