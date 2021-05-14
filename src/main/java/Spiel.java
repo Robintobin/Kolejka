@@ -1,3 +1,9 @@
+/**
+ * Write a description of class Spiel here.
+ *
+ * @author Robin
+ * @version 14.05.21
+ */
 public class Spiel {
 
     public void spielverlauf() {

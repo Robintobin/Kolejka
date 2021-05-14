@@ -38,9 +38,12 @@ enum Warentyp {
     Kleidung
 }
 enum Farbe {
-    Rot
+    Gelb
     Blau
-    ...
+    Braun
+    Grün
+    Rot
+    Schwarz
 }
 
 ' Klassen-Beziehungen

@@ -62,7 +62,6 @@ abstract class Spielkarte {
     -farbe: Farbe
     -bild: Bild
     -beschreibung: String
-    ...
 }
 class Einkaufszettel {
     -warentypen: Warentyp[]
@@ -77,12 +76,20 @@ class Lieferkarte {
     -anzahl: int
 }
 class Aktionskarte {
-    ...
+    +anwesenheitsliste(): void
+    +bueckware(): void
+    +freundImKomitee(): void
+    +gluecklicherZufall(): void
+    +groessereLieferung(): void
+    +inventur(): void
+    +kritikAnDerRegierung(): void
+    +lieferfehler(): void
+    +mutterMitBaby(): void
+    +vordraengler(): void
 }
 abstract class Laden {
     -warteschlange: Warteschlange
     -gibErstePosition(): Spieler
-
 }
 class Warenladen {
     -warentyp: Warentyp
