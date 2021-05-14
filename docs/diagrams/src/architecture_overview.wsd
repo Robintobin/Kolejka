@@ -45,6 +45,18 @@ enum Farbe {
     Rot
     Schwarz
 }
+enum Aktionstyp {
+    Anwesenheitsliste
+    Bueckware
+    FreundImKomitee
+    GluecklicherZufall
+    GroessereLieferung
+    Inventur
+    KritikAnDerRegierung
+    Lieferfehler
+    MutterMitBaby
+    Vordraengler
+}
 
 ' Klassen-Beziehungen
 Spiel o.. Spieler
@@ -68,6 +80,7 @@ Warenladen o.. Spekulant
 
 Warenkarte o.. Warentyp
 Lieferkarte o.. Warentyp
+Aktionskarte o-- Aktionstyp
 
 Spieler o.. Einkaufszettel
 Spieler o.. Aktionskarte

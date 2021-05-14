@@ -76,6 +76,8 @@ class Lieferkarte {
     -anzahl: int
 }
 class Aktionskarte {
+    -aktionstyp: Aktionstyp
+    
     +anwesenheitsliste(): void
     +bueckware(): void
     +freundImKomitee(): void
