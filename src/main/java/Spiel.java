@@ -1,3 +1,9 @@
+/**
+ * Write a description of class Spiel here.
+ *
+ * @author Robin
+ * @version 14.05.21
+ */
 public class Spiel {
 
     public void spielverlauf() {
@@ -21,22 +27,23 @@ public class Spiel {
          * den Markt, bis sich alle Spielfiguren auf dem Spielplan befinden. Sobald dies
          * der Fall ist, beginnt die nächste Phase.
          */
+        // IDEE
         // gibt an, ob einer der Spieler noch Spielfiguren setzen kann
-        boolean jemandKannSetzen = true;
+        // boolean jemandKannSetzen = true;
 
-        while (jemandKannSetzen) {
-            jemandKannSetzen = false;
-            for (Spieler spieler : spielerListe) {
-                if (spieler.hatFreieSpielfigur()) {
-                    spieler.setzeSpielfigur();
-                }
-                // IF nachdem gesetzt wurde immer noch freie Spielfigur
-                if (spieler.hatFreieSpielfigur()) {
-                    // nicht aufhören
-                    jemandKannSetzen = true;
-                }
-            }
-        }
+        // while (jemandKannSetzen) {
+        // jemandKannSetzen = false;
+        // for (Spieler spieler : spielerListe) {
+        // if (spieler.hatFreieSpielfigur()) {
+        // spieler.setzeSpielfigur();
+        // }
+        // // IF nachdem gesetzt wurde immer noch freie Spielfigur
+        // if (spieler.hatFreieSpielfigur()) {
+        // // nicht aufhören
+        // jemandKannSetzen = true;
+        // }
+        // }
+        // }
 
     }
 
@@ -53,14 +60,15 @@ public class Spiel {
          * Die Warenkarten werden so in die Läden gelegt, dass ihre Namen gut sichtbar
          * sind.
          */
-        Lieferkarten[] lieferkarten = lieferkartenStapel.getObersteDrei();
-        for (Lieferkarte lieferkarte : lieferkarten) {
-            Warentyp warentyp = lieferkarte.getTyp();
-            int anzahl = lieferkarte.getAnzahl();
+        // IDEE
+        // Lieferkarten[] lieferkarten = lieferkartenStapel.getObersteDrei();
+        // for (Lieferkarte lieferkarte : lieferkarten) {
+        // Warentyp warentyp = lieferkarte.getTyp();
+        // int anzahl = lieferkarte.getAnzahl();
 
-            Laden laden = laeden.vomTyp(warentyp); // laden mit dem Warentyp
-            laden.addWare(anzahl);
-        }
+        // Laden laden = laeden.vomTyp(warentyp); // laden mit dem Warentyp
+        // laden.addWare(anzahl);
+        // }
     }
 
     public void draengelei() {

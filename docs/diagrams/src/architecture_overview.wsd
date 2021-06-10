@@ -38,9 +38,24 @@ enum Warentyp {
     Kleidung
 }
 enum Farbe {
-    Rot
+    Gelb
     Blau
-    ...
+    Braun
+    Grün
+    Rot
+    Schwarz
+}
+enum Aktionstyp {
+    Anwesenheitsliste
+    Bueckware
+    FreundImKomitee
+    GluecklicherZufall
+    GroessereLieferung
+    Inventur
+    KritikAnDerRegierung
+    Lieferfehler
+    MutterMitBaby
+    Vordraengler
 }
 
 ' Klassen-Beziehungen
@@ -65,6 +80,7 @@ Warenladen o.. Spekulant
 
 Warenkarte o.. Warentyp
 Lieferkarte o.. Warentyp
+Aktionskarte o-- Aktionstyp
 
 Spieler o.. Einkaufszettel
 Spieler o.. Aktionskarte
