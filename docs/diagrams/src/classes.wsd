@@ -38,6 +38,9 @@ class Spielerfigur {
 }
 abstract class Spielfigur {
     -farbe: Farbe
+    +Spielfigur(f: Farbe)
+    +gibFarbe():Farbe
+    +setzeFarbe(f: Farbe):void
 }
 abstract class Liste {
     (ArrayList)
