@@ -1,42 +1,67 @@
 @startuml
+' Einstellungen:
+' skinparam dpi 300
+' skinparam handwritten true
+' skinparam monochrome true
+' skinparam linetype polyline
+' skinparam linetype ortho
+' hide <<myStyle>> stereotype
+' skinparam ClassBorderColor<<myStyle>> Black
+
+' Klassen
 class Spiel
 class Spieler
 class Spekulant
-class Spielfigur
-class Liste
-class Stapel
-class Schlange
-class Karte
+class Spielerfigur
+abstract class Spielfigur
+abstract class Liste
+class Kartenstapel<Spielkarte>
+class Warteschlange<Spielfigur>
+abstract class Karte
+abstract class Spielkarte
 class Einkaufszettel
 class Warenkarte
 class Lieferkarte
 class Aktionskarte
-class Laden
+abstract class Laden
+class Warenladen
 class Schwarzmarkt
+
+enum Warentyp
+enum Farbe
+
 enum Warentyp {
     Kiosk
     Lebensmittel
     Möbel
     Gerät
     Kleidung
+}
+enum Farbe {
+    Rot
+    Blau
     ...
 }
 
-
+' Klassen-Beziehungen
 Spiel o.. Spieler
-Spieler o.. Spielfigur
-Spekulant <|-- Spielfigur
-Spiel o.. Spekulant
+Spieler o.. Spielerfigur
 
-Stapel <|-- Liste
-Schlange <|-- Liste
+Spekulant --|> Spielfigur
+Spielerfigur --|> Spielfigur
 
-Einkaufszettel <|-- Karte
-Warenkarte <|-- Karte
-Lieferkarte <|-- Karte
-Aktionskarte <|-- Karte
+Kartenstapel o.. Liste
+Warteschlange o.. Liste
 
-Schwarzmarkt <|-- Laden
+Einkaufszettel --|> Karte
+Spielkarte --|> Karte
+Warenkarte --|> Spielkarte
+Lieferkarte --|> Spielkarte
+Aktionskarte --|> Spielkarte
+
+Schwarzmarkt --|> Laden
+Warenladen --|> Laden
+Warenladen o.. Spekulant
 
 Warenkarte o.. Warentyp
 Lieferkarte o.. Warentyp
@@ -46,8 +71,20 @@ Spieler o.. Aktionskarte
 Spieler o.. Warenkarte
 
 Spiel o.. Lieferkarte
-Spiel o.. Laden
+Spiel o.. Warenladen
 Spiel o.. Schwarzmarkt
 
-Laden o.. Warenkarte
+Warenladen o.. Warentyp
+
+Laden o.. Warteschlange
+
+Spielfigur o.. Farbe
+
+Spiel o.. Kartenstapel
+Spieler o.. Kartenstapel
+Warenladen o.. Kartenstapel
+Schwarzmarkt o.. Kartenstapel
+
+' Spielerfigur --> Spieler
+' Spekulant --> Schwarzmarkt
 @enduml

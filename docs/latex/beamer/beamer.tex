@@ -17,7 +17,7 @@
 \section{UML-Diagramme}
 \begin{frame}
 	\frametitle{Klassenbeziehungen - Überblick}
-    \includegraphics[height=0.85\textheight]{../../diagrams/out/architecture_overview/architecture_overview.png}
+    \includegraphics[height=0.85\textheight]{../../diagrams/out/classes/classes.png}
 \end{frame}
 
 
@@ -28,46 +28,88 @@
 
 
 \begin{frame}
-	\frametitle{Spiel}
-	\begin{center}		
-		\begin{tikzpicture}
-			\umlclass{Spiel}{
-				-spielerListe: Spieler[]\\
-				-ladenListe: Laden[]\\
-				-lieferkartenStapel: Lieferkarte[]\\
-				-muelleimer: Lieferkarte[]\\
-			}{
-				+spielverlauf(): void\\
-				-anstellenInDenWarteschlangen(): void\\
-				-warenlieferung(): void\\
-				-draengelei(): void\\
-				-ladenoeffnung(): void\\
-				-tauschenAufDemMarkt(): void\\
-				-aufraeumphase(): void\\
-				-samstag(): void\\
-			}
-		\end{tikzpicture}
-	\end{center}
+    \frametitle{Spiel}
+    \begin{center}
+        \begin{tikzpicture}
+            \umlclass{Spiel}{
+                -spielerListe:Spieler[]\\
+                -ladenListe:Laden[]\\
+                -warenListe:Kartenstapel$<$Warenkarte$>$[]\\
+                -schwarzmarkt:Schwarzmarkt\\
+                -lieferwagen:Kartenstapel$<$Lieferkarte$>$\\
+                -muelleimer:Kartenstapel$<$Lieferkarte$>$\\ 
+            }{
+                +spielverlauf():void\\
+                -anstellenInDenWarteschlangen():void\\  
+                -warenlieferung():void\\
+                -draengelei():void\\
+                -ladenoeffnung():void\\
+                -tauschenAufDemMarkt():void\\
+                -aufraeumphase():void\\
+                -samstag():void\\
+            }
+        \end{tikzpicture}
+    \end{center}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Spieler}
+    \begin{center}
+        \begin{tikzpicture}
+            \umlclass{Spieler}{
+                -farbe:Farbe\\
+                -spielfiguren:ArrayList$<$Spielfigur$>$\\
+                -einkaufszettel:Einkaufszettel\\
+                -warenkarten:ArrayList$<$Warenkarte$>$\\
+                -aktionskarten:ArrayList$<$Aktionskarte$>$\\
+            }{
+                +setzeSpielfigur():void\\
+                +hatFreieSpielfigur():boolean\\
+                +istFertig():boolean\\
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
 
 \begin{frame}
-	\frametitle{Spieler}	
-		\begin{center}
-			\begin{tikzpicture}
-				\umlclass{Spieler}{
-					-farbe: Farbe\\
-					-spielfiguren: Spielfigur[]\\
-					-einkaufszettel: Einkaufszettel\\
-					-warenkarten: Warenkarte[]\\
-					-aktionskarten: Aktionskarte[]\\
-				}{
-					+setzeSpielfigur(): void\\
-					+hatFreieSpielfigur(): boolean\\
-					+istFertig(): boolean\\
-				}
-			\end{tikzpicture}
-		\end{center}
+    \frametitle{Schwarzmarkt}
+    \begin{center}
+        \begin{tikzpicture}
+            \umlclass{Schwarzmarkt}{
+                -marktfrau:int\\
+                -marktfelder:Kartenstapel[]\\
+            }{
+                +gibMarktfrauFeld(warentyp: Warentyp):int\\
+                +verschiebeMarktfrau():void
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Warenladen}
+    \begin{center}
+        \begin{tikzpicture}
+            \umlclass{Warenladen}{
+                -warentyp:Warentyp\\
+                -marktfeld:Kartenstapel\\
+            }{
+            }
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Laden}
+    \begin{center}
+        \begin{tikzpicture}
+            \umlclass{Laden}{
+                -warteschlange:Warteschlange\\
+            }{
+                +gibErstePosition():Spieler !Problematisch\\ 
+            }
+        \end{tikzpicture}
+    \end{center}
 \end{frame}
 
 \end{document}
