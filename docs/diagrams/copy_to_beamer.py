@@ -23,7 +23,7 @@ VARIABLES
 """
 KLASSEN = [
     "Spiel",
-    "Spieler"
+    "Spieler",
 ]
 
 
@@ -65,28 +65,36 @@ def find_diagram_classes() -> list:
     """
     _list = []
 
-    diagram_file: str = read_diagram_file()
-
     for class_name in KLASSEN:
-        class_string = get_class_string(class_name, diagram_file)
-        # print(class_string)
-        class_attributes = ""
-        class_methods = ""
-        found_method: bool = False
+        _list.append(find_diagram_class(class_name))
+    return _list
 
-        for line in class_string.split("\n")[1:-1]:
-            if not line == "":
-                line = line.replace(" ", "")
-                if line.__contains__("()"):
-                    found_method = True
-                if not found_method:
-                    class_attributes += "\n"+"    "*4+line+"\\\\"
-                elif found_method:
-                    class_methods += "\n"+"    "*4+line+"\\\\"
-                # print(line+"\\\\")
-        # print(class_attributes)
-        # print(class_methods)
-        out = """\\begin{{frame}}
+def find_diagram_class(class_name: str):
+    diagram_file: str = read_diagram_file()
+    class_string = get_class_string(class_name, diagram_file)
+    # print(class_string)
+    class_attributes = ""
+    class_methods = ""
+    found_method: bool = False
+
+    for line in class_string.split("\n")[1:-1]:
+        if not line == "":
+            line = line.strip(" ") # remove " " in beginning
+            line = line.replace("<", "$<$")
+            line = line.replace(">", "$>$")
+            line = line.replace("#", "\\#")
+            line = line.replace("1", "$1$")
+            line = line.replace("2", "$2$")
+            if line.__contains__("()"):
+                found_method = True
+            if not found_method:
+                class_attributes += "\n"+"    "*4+line+"\\\\"
+            elif found_method:
+                class_methods += "\n"+"    "*4+line+"\\\\"
+            # print(line+"\\\\")
+    # print(class_attributes)
+    # print(class_methods)
+    out = """\\begin{{frame}}
     \\frametitle{{{0}}}
     \\begin{{center}}		
         \\begin{{tikzpicture}}
@@ -97,15 +105,13 @@ def find_diagram_classes() -> list:
     \\end{{center}}
 \\end{{frame}}
 """
-        out = out.format(
-            class_name,
-            class_name,
-            class_attributes,
-            class_methods
-        )
-        _list.append(out)
-    
-    return _list
+    out = out.format(
+        class_name,
+        class_name,
+        class_attributes,
+        class_methods
+    )
+    return out
 
 
 
