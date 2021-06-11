@@ -7,7 +7,6 @@
  */
 
 import java.util.Collections;
-import java.util.ArrayList;
 
 public class Warteschlange extends Liste {
     public Warteschlange() {
@@ -20,28 +19,28 @@ public class Warteschlange extends Liste {
          */
         arrayList.add(f);
     }
-    
+
     public Spielfigur entferneErsten() {
         /*
          * Entfernt vorderste Spielfigur (auf Position 1).
          */
         return (Spielfigur) arrayList.remove(0);
     }
-    
+
     public Spielfigur entferne(int index) {
         /*
          * Entfernt Spielfigur an der angegebenen Stelle.
          */
         return (Spielfigur) arrayList.remove(index);
     }
-    
+
     public void umgekehrt() {
         /*
          * Kehrt die Reihenfolge der Spielfiguren um.
          */
         Collections.reverse(arrayList);
     }
-    
+
     public void bewege(int von, int zu) {
         /*
          * Bewegt die Spielfigur an der Stelle "von" zu der Stelle "zu".
@@ -49,7 +48,7 @@ public class Warteschlange extends Liste {
         Spielfigur f = (Spielfigur) arrayList.remove(von);
         arrayList.add(zu, f);
     }
-    
+
     public void tausche(int i1, int i2) {
         /*
          * Tauscht die Spielfiguren an den Stellen i1 und i2.
