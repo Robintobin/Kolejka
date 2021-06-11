@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  14 MAY 2021 17:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.5.5)  11 JUN 2021 19:03
 entering extended mode
 **e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
 (e:/Users/Robin/Documents/Github/Kolejka/docs/latex/beamer/beamer.tex
@@ -997,40 +997,64 @@ Dictionary: translator-theorem-dictionary, Language: English
 ] (beamer.toc) [2
 
 ]
-<../../diagrams/out/architecture_overview/architecture_overview.png, id=103, 1084.05pt x 723.70375pt>
+<../../diagrams/out/architecture_overview/architecture_overview.png, id=130, 1084.05pt x 723.70375pt>
 File: ../../diagrams/out/architecture_overview/architecture_overview.png Graphic file (type png)
 <use ../../diagrams/out/architecture_overview/architecture_overview.png>
-Package pdftex.def Info: ../../diagrams/out/architecture_overview/architecture_overview.png  used on input line 23.
-(pdftex.def)             Requested size: 307.28987pt x 205.14238pt.
+Package pdftex.def Info: ../../diagrams/out/architecture_overview/architecture_overview.png  used on input line 21.
+(pdftex.def)             Requested size: 289.47186pt x 193.24626pt.
  [3
 
  <../../diagrams/out/architecture_overview/architecture_overview.png (PNG copy)>]
-<../../diagrams/out/classes/classes.png, id=131, 1401.235pt x 1210.5225pt>
+<../../diagrams/umlet/kolejka_uml_26_04_2021.png, id=162, 1505.625pt x 963.6pt>
+File: ../../diagrams/umlet/kolejka_uml_26_04_2021.png Graphic file (type png)
+<use ../../diagrams/umlet/kolejka_uml_26_04_2021.png>
+Package pdftex.def Info: ../../diagrams/umlet/kolejka_uml_26_04_2021.png  used on input line 27.
+(pdftex.def)             Requested size: 284.16489pt x 181.87822pt.
+ [4
+
+ <../../diagrams/umlet/kolejka_uml_26_04_2021.png (PNG copy)>]
+<../../diagrams/out/classes/classes.png, id=192, 1401.235pt x 1210.5225pt>
 File: ../../diagrams/out/classes/classes.png Graphic file (type png)
 <use ../../diagrams/out/classes/classes.png>
-Package pdftex.def Info: ../../diagrams/out/classes/classes.png  used on input line 30.
-(pdftex.def)             Requested size: 247.45616pt x 213.7656pt.
+Package pdftex.def Info: ../../diagrams/out/classes/classes.png  used on input line 35.
+(pdftex.def)             Requested size: 227.34692pt x 196.4028pt.
 
-Overfull \vbox (5.71884pt too high) detected at line 30
+Overfull \vbox (8.46529pt too high) detected at line 35
  []
 
-[4
+[5
 
  <../../diagrams/out/classes/classes.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 55.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 61.
  (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-) [5
+)
+Overfull \vbox (15.56013pt too high) detected at line 61
+ []
 
-] [6
+[6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
 
 ]
 \tf@nav=\write6
@@ -1044,20 +1068,20 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 
  (beamer.aux)
 Package rerunfilecheck Info: File `beamer.out' has not changed.
-(rerunfilecheck)             Checksum: 50BBEDC0EFD4B19828563C6CAE367C58;108.
+(rerunfilecheck)             Checksum: 677ABF56635457D589CA2A3C467C3D17;632.
  ) 
 Here is how much of TeX's memory you used:
- 28306 strings out of 479334
- 584275 string characters out of 2857085
- 938450 words of memory out of 3000000
- 45148 multiletter control sequences out of 15000+200000
+ 28408 strings out of 479334
+ 586052 string characters out of 2857085
+ 943632 words of memory out of 3000000
+ 45231 multiletter control sequences out of 15000+200000
  409918 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 131i,19n,132p,530b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on beamer.pdf (6 pages, 272936 bytes).
+ 131i,20n,132p,530b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on beamer.pdf (13 pages, 392911 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,1 +1,4 @@
-\beamer@sectionintoc {1}{UML-Diagramme}{3}{0}{1}
+\beamer@sectionintoc {1}{Überblick - UML-Diagramme}{3}{0}{1}
+\beamer@sectionintoc {2}{Spiel und Spieler}{6}{0}{2}
+\beamer@sectionintoc {3}{Läden}{8}{0}{3}
+\beamer@sectionintoc {4}{Listen - Warteschlange und Kartenstapel}{11}{0}{4}

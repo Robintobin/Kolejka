@@ -1428,6 +1428,13 @@ INPUT ..\..\diagrams\out\architecture_overview\architecture_overview.png
 INPUT ..\..\diagrams\out\architecture_overview\architecture_overview.png
 INPUT ..\..\diagrams\out\architecture_overview\architecture_overview.png
 INPUT ..\..\diagrams\out\architecture_overview\architecture_overview.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
+INPUT ..\..\diagrams\umlet\kolejka_uml_26_04_2021.png
 INPUT ..\..\diagrams\out\classes\classes.png
 INPUT ..\..\diagrams\out\classes\classes.png
 INPUT ..\..\diagrams\out\classes\classes.png
@@ -1468,6 +1475,8 @@ OUTPUT beamer.snm
 INPUT beamer.aux
 INPUT .\beamer.out
 INPUT .\beamer.out
+INPUT C:\Users\Robin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Robin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Robin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\Robin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\Robin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
