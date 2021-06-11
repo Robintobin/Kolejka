@@ -5,29 +5,55 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Warteschlange
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class Warteschlange
-     */
-    public Warteschlange()
-    {
-        // initialise instance variables
-        x = 0;
+import java.util.Collections;
+import java.util.ArrayList;
+
+public class Warteschlange extends Liste {
+    public Warteschlange() {
+        super();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void anstellen(Spielfigur f) {
+        /*
+         * Fügt die Spielfigur f hinten in der Warteschlange hinzu.
+         */
+        arrayList.add(f);
+    }
+    
+    public Spielfigur entferneErsten() {
+        /*
+         * Entfernt vorderste Spielfigur (auf Position 1).
+         */
+        return (Spielfigur) arrayList.remove(0);
+    }
+    
+    public Spielfigur entferne(int index) {
+        /*
+         * Entfernt Spielfigur an der angegebenen Stelle.
+         */
+        return (Spielfigur) arrayList.remove(index);
+    }
+    
+    public void umgekehrt() {
+        /*
+         * Kehrt die Reihenfolge der Spielfiguren um.
+         */
+        Collections.reverse(arrayList);
+    }
+    
+    public void bewege(int von, int zu) {
+        /*
+         * Bewegt die Spielfigur an der Stelle "von" zu der Stelle "zu".
+         */
+        Spielfigur f = (Spielfigur) arrayList.remove(von);
+        arrayList.add(zu, f);
+    }
+    
+    public void tausche(int i1, int i2) {
+        /*
+         * Tauscht die Spielfiguren an den Stellen i1 und i2.
+         */
+        Collections.swap(arrayList, i1, i2);
     }
 }

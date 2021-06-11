@@ -1,10 +1,17 @@
 #BlueJ class context
 comment0.target=Warteschlange
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Warteschlange\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Warteschlange()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Warteschlange\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment2.params=f
+comment2.target=void\ anstellen(Spielfigur)
+comment3.params=
+comment3.target=Spielfigur\ entferneErsten()
+comment4.params=index
+comment4.target=Spielfigur\ entferne(int)
+comment5.params=
+comment5.target=void\ umgekehrt()
+comment6.params=von\ zu
+comment6.target=void\ bewege(int,\ int)
+comment7.params=i1\ i2
+comment7.target=void\ tausche(int,\ int)
+numComments=8

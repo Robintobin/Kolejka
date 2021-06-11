@@ -5,20 +5,23 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Liste
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public abstract class Liste {
+    protected ArrayList arrayList;
+    
+    public Liste() {
+        arrayList = new ArrayList();
+    }
+    
+    public Object[] toArray() {
+        return arrayList.toArray();
+    }
+    
+    public Object gib(int index) {
+        return arrayList.get(index);
     }
 }
