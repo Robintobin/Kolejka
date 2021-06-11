@@ -13,8 +13,8 @@ public class Kartenstapel extends Liste {
     public void push(Spielkarte k) {
         arrayList.add(k);
     }
-    
+
     public Spielkarte pop() {
-        return (Spielkarte) arrayList.remove(arrayList.size()-1);
+        return (Spielkarte) arrayList.remove(arrayList.size() - 1);
     }
 }
