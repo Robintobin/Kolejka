@@ -43,19 +43,22 @@ abstract class Spielfigur {
     +setzeFarbe(f: Farbe):void
 }
 abstract class Liste {
-    (ArrayList)
+    #arrayList: ArrayList
+    +toArray(): Object[]
+    +gib(): Object
 }
 class Kartenstapel<Spielkarte> {
-    -pop(): Spielkarte
-    -push(object: Spielkarte)
+    +pop(): Spielkarte
+    +push(object: Spielkarte)
 }
 class Warteschlange<Spielfigur> {
-    -pop(): Spielfigur
-    -push(object: Spielfigur)
+    +anstellen(): Spielfigur
+    +entferneErsten(f: Spielfigur)
 
-    +reverse(): void
-    +move(from: int, to: int): void
-    +remove(index: int): void
+    +entferne(index: int): Spielfigur
+    +umgekehrt(): void
+    +bewege(von: int, zu: int): void
+    +tausche(i1: int, i2: int): void
 }
 abstract class Karte {
     ...
