@@ -5,7 +5,6 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public enum Warentyp
-{
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+public enum Warentyp {
+    KIOSK, LEBENSMITTEL, MOEBEL, GERAET, KLEIDUNG
 }

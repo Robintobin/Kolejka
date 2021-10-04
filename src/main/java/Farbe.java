@@ -5,7 +5,6 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public enum Farbe
-{
+public enum Farbe {
     GELB, BLAU, BRAUN, GRUEN, ROT, SCHWARZ
 }
