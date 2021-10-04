@@ -59,6 +59,8 @@ class Warteschlange<Spielfigur> {
     +umgekehrt(): void
     +bewege(von: int, zu: int): void
     +tausche(i1: int, i2: int): void
+
+    +gibErsteFigur(): Spielfigur
 }
 abstract class Karte {
     ...
