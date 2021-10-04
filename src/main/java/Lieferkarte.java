@@ -5,29 +5,12 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Lieferkarte
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Lieferkarte extends Spielkarte {
 
-    /**
-     * Constructor for objects of class Lieferkarte
-     */
-    public Lieferkarte()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+    private Warentyp warentyp;
+    private int anzahl;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Lieferkarte() {
+
     }
 }

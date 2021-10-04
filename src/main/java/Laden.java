@@ -5,20 +5,17 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Laden
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public abstract class Laden {
+    private Warteschlange warteschlange;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void gibErstePosition() {
+        /*
+         * Gibt Spieler/Schwarzmarkt der Spielfigur an erster Stelle zurück.
+         */
+        if (warteschlange.gibErsteFigur() instanceof Spielerfigur) {
+            // SPIELER
+        } else {
+            // Schwarzmarkt für Arme
+        }
     }
 }
