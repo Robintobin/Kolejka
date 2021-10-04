@@ -55,4 +55,11 @@ public class Warteschlange extends Liste {
          */
         Collections.swap(arrayList, i1, i2);
     }
+
+    public Spielfigur gibErsteFigur() {
+        /*
+         * Gibt Spielfigur an erster Stelle zurück.
+         */
+        return (Spielfigur) arrayList.get(0);
+    }
 }
