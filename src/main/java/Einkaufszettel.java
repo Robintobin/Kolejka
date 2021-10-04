@@ -5,29 +5,23 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Einkaufszettel
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Einkaufszettel extends Karte {
+    private Warentyp[] warentypen = new Warentyp[4];
 
-    /**
-     * Constructor for objects of class Einkaufszettel
-     */
-    public Einkaufszettel()
-    {
-        // initialise instance variables
-        x = 0;
+    public Einkaufszettel(Warentyp[] warentypen) {
+        this.warentypen = warentypen;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int gibAnzahl(Warentyp warentyp) {
+        // [0] -> 4, [2] -> 3
+        // 4-idx
+
+        for (int i = 0; i < this.warentypen.length; i++) {
+            if (this.warentypen[i] == warentyp) {
+                return 4 - i;
+            }
+        }
+        return 0;
     }
+
 }
